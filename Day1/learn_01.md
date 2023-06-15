@@ -1,49 +1,31 @@
 ## On Day 01
 I prepared my python Development Environment and started out on the challenge with the basic python syntax and data types:
 
+## Printing Outputs in python
+    print("Hello World")
+learnt a new concept the use of sep=":" and end="PM" optional keyword arguments with the print() function to customize the behavior of the output. They allow you to customize the separator between printed items and the ending character, respectively.
+
 ## Variables and their assignments
 Variables temporarily store data in computer’s memory. Acts as an address pointing to specific stored data
-syntax:     variable_name = value
-     price = 10 
-     rating = 4.9 
-     course_name = ‘Python for Beginners’ 
-     is_published = True
+syntax:   variable_name = value
+      name = 'Mackena' 
+      age = 10 
+      rating = 4.9 
+      is_female = True
 
 ## Data Types
-  • price is an integer (a whole number without a decimal point) 
-  • rating is a float (a number with a decimal point) 
-  • course_name is a string (a sequence of characters) 
-  • is_published is a boolean. Boolean values can be True or False. 
+      • integer (a whole number without a decimal point) 
+      • float (a number with a decimal point) 
+      • string (a sequence of characters) 
+      • boolean (can be True or False)
 
 ## Comments 
-used to add notes to code by explaining the hows and whys, not what the code does. That should be reflected in the code itself. 
+To add notes to code by explaining the hows and whys.
+Not to explain the whats of the code as this is be reflected in the code itself. 
 
-## Strings 
-single (‘ ‘) or double (“ “) quotes defines strings 
-A multi-line string surrounded with tripe quotes (“””). 
-We can get individual characters in a string using square brackets []. 
-     course = ‘Python for Beginners’
-     course[1] # returns the second character
-     course[-1] # returns the first character from the end 
-     course[-2] # returns the second character from the end
-We can slice a string using a similar notation: 
-    course[1:5] 
-The above expression returns all the characters starting from the index position of 1 
-to 5 (but excluding 5). The result will be ytho 
-If we leave out the start index, 0 will be assumed. 
-If we leave out the end index, the length of the string will be assumed. 
-
-## Formatted strings
-We can use formatted strings to dynamically insert values into our strings: 
-     name = ‘Mosh’ 
-     message = f’Hi, my name is {name}’
-     message.upper() # to convert to uppercase
-     message.lower() # to convert to lowercase
-     message.title() # to capitalize the first letter of every word
-     message.find(‘p’) # returns the index of the first occurrence of p (or -1 if not found) 
-     message.replace(‘p’, ‘q’)
-To check if a string contains a character (or a sequence of characters), we use the in 
-operator: 
-     contains = ‘Python’ in course
 
 ## Challenge_01
+Check in a student named John Doe into the hostels. He is 21 years old and He is a new student. Declare three variables to store: name, age and if he is a new or old a student.
+Output this status message:         
+           He has been admitted to the hostels.
+           At Time: 12:52:50PM 
