@@ -1,4 +1,4 @@
-# decraring variables
+# declaring variables
 name = 'John Doe'
 age = 21
 is_new = True
