@@ -1,6 +1,6 @@
 # On Day 06
 
-# CONDITIONAL STATEMENTS:
+## CONDITIONAL STATEMENTS:
  When you want to execute some code only if a certain condition is met, you can use a conditional statement:
             If-
             if-else
@@ -88,8 +88,10 @@ The program checks the conditions of the subsequent elif blocks, If the conditio
 
 I
 ## Nested Conditional statements:
-                
-            x = 10
+NESTING in 'if' statements refers to the practice of including one or more 'if' statements within another 'if' statement. This allows for the creation of more complex conditional structures and the evaluation of multiple conditions in a hierarchical manner.
+
+By nesting 'if' statements, you can specify different sets of conditions to be evaluated based on the outcome of the outer condition. The inner 'if' statements are only executed if the corresponding outer condition is true. This allows for the creation of more fine-grained and specific logic in your code.             
+            x = 20
 
             if x > 5: # True
                 if x == 6: # False
@@ -102,60 +104,13 @@ I
                  print("else")
 
 
+# challenge_06:
+Grade Classifier
+Write a Python program that prompts the user to enter a numerical grade between 0 and 100, and then prints the corresponding letter grade based on the following grading scale:
 
-## Nested if-else statements
-Now let's discuss two special cases of the conditional statement.
-
-First, consider the case where the instruction placed after the if is another if.
-
-Let's write the same in Python. Consider carefully the code here:
-
-
-            if the_weather_is_good:
-                if nice_restaurant_is_found:
-                    have_lunch()
-                else:
-                    eat_a_sandwich()
-            else:
-                if tickets_are_available:
-                    go_to_the_theater()
-                else:
-                    go_shopping()
-
-Here are two important points:
-
-this use of the if statement is known as nesting; remember that every else refers to the if which lies at the same indentation level; you need to know this to determine how the ifs and elses pair up;
-consider how the indentation improves readability, and makes the code easier to understand and trace.
-The elif statement
-The second special case introduces another new Python keyword: elif. As you probably suspect, it's a shorter form of else if.
-
-elif is used to check more than just one condition, and to stop when the first statement which is true is found.
-
-Our next example resembles nesting, but the similarities are very slight. Again, we'll change our plans and express them as follows: If the weather is fine, we'll go for a walk, otherwise if we get tickets, we'll go to the theater, otherwise if there are free tables at the restaurant, we'll go for lunch; if all else fails, we'll stay home and play chess.
-
-Have you noticed how many times we've used the word otherwise? This is the stage where the elif keyword plays its role.
-
-Let's write the same scenario using Python:
-
-
-            if the_weather_is_good:
-                go_for_a_walk()
-            elif tickets_are_available:
-                go_to_the_theater()
-            elif table_is_available:
-                go_for_lunch()
-            else:
-                play_chess_at_home()
-            
-The way to assemble subsequent if-elif-else statements is sometimes called a cascade.
-
-Notice again how the indentation improves the readability of the code.
-
-Some additional attention has to be paid in this case:
-
-you mustn't use else without a preceding if;
-else is always the last branch of the cascade, regardless of whether you've used elif or not;
-else is an optional part of the cascade, and may be omitted;
-if there is an else branch in the cascade, only one of all the branches is executed;
-if there is no else branch, it's possible that none of the available branches is executed.
-This may sound a little puzzling, but hopefully some simple examples will help shed more light.
+                90 and above: A
+                80 to 89: B
+                70 to 79: C
+                60 to 69: D
+                Below 60: F
+Your program should validate the input to ensure it is within the valid range (0 to 100) and handle any invalid input appropriately.

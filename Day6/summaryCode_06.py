@@ -58,6 +58,8 @@ if number3 > largest_number:
 print("The largest number is:", largest_number)
 
 
+
+
 # Program to determine the category of a given score
 
 score = int(input("Enter the score: "))
