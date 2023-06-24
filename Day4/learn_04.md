@@ -95,8 +95,10 @@ Example: if you define a class called Circle, you might define methods such as c
               print("Area:", area)
               print("Circumference:", circumference)
 
-### Self Parameter in methods: 
+### (self) Parameter in methods: 
 It's a reference to the instance of the class itself. It allows methods to access and manipulate the instance's attributes and perform actions specific to that instance.
+
+When a method is called, the instance itself is automatically passed as the first argument (self). This allows the method to operate on the specific instance and access its attributes and methods.
 
 ## Challenge_04
 Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old, except use f-strings instead of the + operator to print the resulting output message.
