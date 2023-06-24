@@ -39,17 +39,16 @@ The program should continue prompting the user for guesses until they guess the 
 To make the game more interesting, you can provide hints such as "Warmer" or "Colder" based on the proximity of the guessed number to the actual number.
 
 
-## Solution 03
-Start by importing the random module to generate a random number.
-Use the randint() function to generate a random number between 1 and 100 and store it in the secret_number variable.
-
-Initialize a variable called attempts to keep track of the number of attempts made by the user.
-
-Start the game loop using a while loop that continues until the user guesses the correct number. Inside the loop, prompt the user to enter a guess and convert it to an integer using the int() function.
-
-After each guess, increment the attempts variable by 1.
-
-Then compare the guess to the secret number using conditional statements (if, elif, else) and provide feedback to the user based on whether the guess is too low, too high, or correct. If the guess is correct, break out of the loop and display the number of attempts it took to guess correctly.
+## pseudocode 03
+        - import the random module to generate a random number.
+        - Use the randint() function to generate a random number between 1 and 100 and store it in the secret_number variable.
+        - Initialize a variable called 'attempts' to keep track the number of attempts made by the user.
+        - Start the game loop using a while loop that continues until the user guesses the correct number. 
+        - Inside the loop, prompt the user to enter a guess and convert it to an integer using the int() function.
+        - After each guess, increment the attempts variable by 1.
+        - Compare the guess to the secret number using conditional statements (if, elif, else) 
+        - Provide feedback to the user based on whether the guess is too low, too high, or correct.   
+        - If the guess is correct, break out of the loop and display the number of attempts it took to guess correctly.
 
 
 ## 04: Challenge: Multiplication Table Generator
@@ -57,11 +56,10 @@ Write a Python program that prompts the user to enter a number, and then generat
 
 Your program should validate the input to ensure it is a positive integer. If the input is invalid, display an error message and prompt the user again.
 
-## Solution 04
-Use a while loop to repeatedly prompt the user for input until a valid positive integer is entered. Use a try-except block to catch any ValueError that may occur if the user enters a non-integer value.
-
-Inside the loop, validate the input to ensure it is a positive integer.  
-If the input is valid, use a for loop to iterate from 1 to 10 (inclusive) and generate the multiplication table for the given number. 
-Calculate the product by multiplying the current number with the input number, and then print each equation using formatted strings.
-
-If the input is invalid, display an error message and continue the loop until a valid input is provided.
+## pseudocode 04
+        - Use a while loop to repeatedly prompt the user for input until a valid positive integer is entered. 
+        - Use a try-except block to catch any ValueError that may occur if the user enters a non-integer value.
+        - Inside the loop, validate the input to ensure it is a positive integer.  
+        - If the input is valid, use a for loop to iterate from 1 to 10 (inclusive) and generate the multiplication table for the given number. 
+        - Calculate the product by multiplying the current number with the input number, and then print each equation using formatted strings.
+        - If the input is invalid, display an error message and continue the loop until a valid input is provided.
