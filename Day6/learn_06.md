@@ -1,6 +1,13 @@
 # On Day 06
 
-## CONDITIONAL STATEMENTS:
+# FLOW CONTROL: 
+ Flow control in Python refers to the mechanisms and constructs that allow you to control the execution flow of your program. It enables you to dictate which statements are executed and in what order, based on certain conditions or criteria. 
+ 
+ Flow control helps you create logic, make decisions, and perform different actions depending on specific conditions.
+
+ Thus, by utilizing different flow control mechanisms, you can create programs that make decisions, repeat tasks, handle errors, and control the logical flow of your code based on specific conditions and requirements.
+
+ ## FLOW CONTROL: Conditional statements:
  When you want to execute some code only if a certain condition is met, you can use a conditional statement:
             If-
             if-else
@@ -80,7 +87,7 @@ The program checks the conditions of the subsequent elif blocks, If the conditio
             elif x > 20:                     # False
                     print("x > 20")
 
-            elif x > 5:                  # True
+            elif x > 5:                      # True
                 print("x > 5")
 
             else:
@@ -104,13 +111,11 @@ By nesting 'if' statements, you can specify different sets of conditions to be e
                  print("else")
 
 
-# challenge_06:
-Grade Classifier
-Write a Python program that prompts the user to enter a numerical grade between 0 and 100, and then prints the corresponding letter grade based on the following grading scale:
+# challenge_06: 
+Write a Python program that prompts the user to enter a numerical grade between 0 and 100, and then prints the corresponding congraturatory message based on the following grading scale:
 
-                90 and above: A
-                80 to 89: B
-                70 to 79: C
-                60 to 69: D
-                Below 60: F
-Your program should validate the input to ensure it is within the valid range (0 to 100) and handle any invalid input appropriately.
+                90 and above: good job ( >=95 excellent )
+                80 to 89: well done
+                70 to 79: keep it up
+                60 to 69: average
+                Below 60: needs improvement
