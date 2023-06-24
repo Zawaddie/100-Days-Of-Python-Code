@@ -16,7 +16,7 @@ Write a Python program that prompts the user to enter a word or phrase. The prog
 
 {A palindrome is a word, phrase, number, or sequence of characters that reads the same backward as forward.}
 
-## solution
+## pseudocode:
 
         - Prompt the user to enter a word or phrase.
         - Remove any spaces and convert the input to lowercase.
