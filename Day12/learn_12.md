@@ -53,6 +53,7 @@ Common List Methods: Lists have various useful methods like
               reverse(), 
               index(), 
               count(), .
+              clear()
 
 
 
@@ -72,6 +73,10 @@ Rembering to use appropriate list methods and operations, write a Python program
             is present in the list and print an appropriate message.
          9. Remove the first occurrence of the number entered in step 8 from the numbers list.
          10.Print the final contents of the numbers list.
+
+## challenge_12: duplicate Remover.
+write a program to remove duplicate from a list
+
 
 
 
