@@ -7,10 +7,6 @@ for number in numbers:
         uniques.append(number)
 print(uniques)
 
-
-
-
 # USE SETS.
-
 non_dup = list(set(numbers))
 print(f"NEW LIST   {non_dup}")
