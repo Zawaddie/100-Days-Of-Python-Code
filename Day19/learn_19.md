@@ -1,100 +1,102 @@
 # On Day 19
 
-# Regular expressions:
-consider:
+# List comprehensions:
+These provide a concise and elegant way to create new lists based on existing iterables, such as lists, strings, or tuples, with a compact syntax.  
+They allow you to combine loops and conditional statements in a single line to generate a new list.
 
-        - Understanding the syntax and pattern matching rules of regular expressions
-        - Metacharacters and character classes in regular expressions
-        - Quantifiers and repetition in regular expressions
-        - Anchors and boundary matching
-        - Grouping and capturing in regular expressions
-        - Special sequences and escape characters in regular expressions
-        - Regular expression functions and methods in Python 
-          (e.g., re.search(), re.match(), re.findall())
-        - Modifying and replacing strings using regular expressions
+The general syntax:
 
-Regular expressions (regex,regexp) are powerful pattern-matching tools. They provide a concise and flexible way to search, match, and manipulate text based on specific patterns.
+        new_list = [expression for item in iterable if condition]
+        
+### expression: 
+Represents the transformation or operation to be performed on each item from the iterable. It can be a simple value, a calculation, or a function call.
 
-Are essentially sequences of characters that define a search pattern.  
-They allow you to describe complex search patterns by using a combination of metacharacters, special sequences, and literal characters.
+### item: 
+Represents each item in the iterable that will be processed by the expression.
 
-## Basic Syntax:
+### iterable: 
+Refers to the original sequence or collection of items, such as a list or string.
 
-LITERAL CHARACTERS: Regular expressions can contain literal characters, which match themselves exactly.  
-For example, the regex abc matches the string "abc" as is.
+### condition (optional): 
+Specifies an optional filtering condition. The expression is only applied to items that satisfy the condition.
 
-METACHARACTERS: Metacharacters have special meanings in regular expressions. Some commonly used metacharacters include:  
-            a)  . (matches any character)  
-            b)  * (matches zero or more occurrences)    
-            c)  + (matches one or more occurrences)  
-            d)  ? (matches zero or one occurrence)  
-            e)  ^ (matches the start of a string)  
-            f)  $  matches the end of a string
+List comprehensions are often used to perform simple operations on each item in a list and filter out specific elements. They can make your code more concise and readable compared to traditional loops.
 
-CHARACTER CLASSES: Character classes are enclosed in square brackets ([]) and allow you to define a set of characters to match. For example, [aeiou] matches any vowel.
+## Usage of list comprehensions:
+### 1. Squaring each number in a list:
 
-QUANTIFIERS: Quantifiers specify the number of occurrences to match.   
-For example, a{2,4} matches 2 to 4 occurrences of the letter 'a'.
+            numbers = [1, 2, 3, 4, 5]
+            squared = [x**2 for x in numbers]
+            print(squared)  # Output: [1, 4, 9, 16, 25]
 
-## Functions and Methods in the re Module:
-The Python re module provides functions and methods for working with regular expressions:
+### 2. Filtering even numbers from a list:
 
-    re.search(pattern, string) 
-Searches for the pattern anywhere in the string and returns a match object or None.
+            numbers = [1, 2, 3, 4, 5]
+            evens = [x for x in numbers if x % 2 == 0]
+            print(evens)  # Output: [2, 4]
 
-    re.match(pattern, string)
-Matches the pattern at the beginning of the string and returns a match object or None.
+### 3.Creating a new list from characters in a string:
 
-    re.findall(pattern, string)
-Returns all non-overlapping occurrences of the pattern in the string as a list of strings.
+            text = "Hello, World!"
+            letters = [c.lower() for c in text if c.isalpha()]
+            print(letters)  # Output: ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']
 
-    re.finditer(pattern, string) 
-Returns an iterator yielding match objects for all non-overlapping occurrences of the pattern.
+List comprehensions offer a concise and efficient way to manipulate and transform data in Python, making your code more expressive and readable.
 
-    re.sub(pattern, repl, string) 
-Replaces all occurrences of the pattern in the string with the replacement string.
+## Nested List Comprehensions: 
+List comprehensions can be nested within each other to handle multi-dimensional data structures. This allows you to create complex lists or perform operations on nested elements.
 
-    re.split(pattern, string) 
-Splits the string by the occurrences of the pattern and returns a list of strings.
+        matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        flattened = [x for row in matrix for x in row]
+        print(flattened)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+## Multiple Iterables: 
+You can use multiple iterables in a single list comprehension by using the zip() function or nested loops. This allows you to combine elements from multiple lists or perform operations on corresponding elements. 
 
-## use cases for regular expressions:
-Pattern Matching: 
+        names = ['Alice', 'Bob', 'Charlie']
+        ages = [25, 30, 35]
+        person_data = [(name, age) for name, age in zip(names, ages)]
+        print(person_data)  # Output: [('Alice', 25), ('Bob', 30), ('Charlie', 35)]
 
-Are commonly used for pattern matching in strings. You can search for specific patterns or sequences of characters within a text.
+# Dictionary Comprehensions: 
+Similar to list comprehensions, you can create dictionaries using dictionary comprehensions. This enables you to quickly create dictionaries based on an iterable, with expressions defining the key-value pairs. 
 
-Text Extraction: 
+        numbers = [1, 2, 3, 4, 5]
+        square_dict = {x: x**2 for x in numbers}
+        print(square_dict)  # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 
-Enable you to extract specific parts of a text that match a given pattern.  
-For example, you can extract email addresses, URLs, or phone numbers from a larger string.
+## Generator Expressions: 
+If you only need to iterate over the generated elements without storing them all in memory, you can use generator expressions instead of list comprehensions. Generator expressions are similar to list comprehensions, but they create a generator object, which produces the values on-the-fly as you iterate over them. This can be more memory-efficient for large datasets. 
 
-Text Validation: 
+    numbers = [1, 2, 3, 4, 5]
+    squared_gen = (x**2 for x in numbers)
+    for num in squared_gen:
+        print(num)  # Output: 1, 4, 9, 16, 25
 
-Regular expressions are useful for validating whether a string matches a certain pattern or conforms to a specific format. For instance, you can validate email addresses, dates, or credit card numbers.
+## Conditional Expressions: 
+List comprehensions can include conditional expressions that allow you to specify different expressions based on conditions. This enables you to apply different transformations or filtering based on specific criteria.
 
-Text Replacement: 
+        numbers = [1, 2, 3, 4, 5]
+        result = [x if x % 2 == 0 else x**2 for x in numbers]
+        print(result)  # Output: [1, 2, 9, 4, 25]
 
-Regular expressions allow you to perform find and replace operations in strings based on patterns. You can search for a specific pattern and replace it with another string or modify it in some way.
+## Challenge_19: Vowel Counter
 
-Data Parsing: 
+Write a Python program that prompts the user to enter a sentence and counts the occurrence of each vowel (a, e, i, o, u) in the sentence. 
 
-Regular expressions are often used to parse structured or semi-structured data. For example, you can parse log files, CSV files, or HTML/XML documents by extracting relevant information based on specific patterns.
+The program should use a list comprehension to create a list of tuples, where each tuple contains a vowel and its corresponding count. The list should be sorted in descending order of vowel frequency.
 
-Data Cleaning: 
+    - Ask the user to enter a sentence.
+    - Use a list comprehension to create a list of tuples, where each tuple contains a vowel and its count in the sentence.
+    - Sort the list in descending order of vowel frequency.
+    - Display the vowels along with their counts.
 
-Regular expressions can be employed to clean up text data by removing unwanted characters, replacing multiple spaces with a single space, or removing HTML tags, among other things.
+## Challenge: Sentence Reversal
 
-Text Manipulation: 
+Write a Python program that prompts the user to enter a sentence and reverses the order of the words in the sentence using a list comprehension. The program should then display the reversed sentence.
 
-Regular expressions provide powerful string manipulation capabilities. You can split strings, join strings, or perform other operations based on pattern matches.
-
-## Special Sequences:
-
-Special sequences are predefined patterns that match common patterns. 
-
-    \d matches any digit, 
-    \w matches any alphanumeric character, 
-    \s matches any whitespace character
-    \b matches a word boundary.
-
-## Challenge_19:
+        - Ask the user to enter a sentence.
+        - Use a list comprehension to split the sentence into individual words.
+        - Create a new list comprehension to reverse the order of the words.
+        - Join the reversed words back into a sentence using the join() method.
+        - Display the reversed sentence.
