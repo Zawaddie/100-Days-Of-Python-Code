@@ -1,0 +1,43 @@
+# Create an empty list called numbers
+numbers = []
+
+# Prompt the user to enter five integers and add them to the list
+for _ in range(5):
+    number = int(input("Enter an integer: "))
+    numbers.append(number)
+
+# Print the list in its original order
+print("Original list:", numbers)
+
+# Sort the list in ascending order
+numbers.sort()
+
+# Print the sorted list
+print("Sorted list:", numbers)
+
+# Find and print the maximum and minimum values
+maximum = max(numbers)
+minimum = min(numbers)
+print("Maximum value:", maximum)
+print("Minimum value:", minimum)
+
+# Calculate and print the sum of all elements
+total = sum(numbers)
+print("Sum of all elements:", total)
+
+# Prompt the user to enter a number to search for
+search_number = int(input("Enter a number to search for: "))
+
+# Check if the number is present in the list
+try:
+    if search_number in numbers:
+       print("The number is present in the list.")
+    else:
+       print("The number is not present in the list.")
+
+# Remove the first occurrence of the number from the list
+    numbers.remove(search_number)
+except ValueError:
+ print("number not in the list")
+# Print the final contents of the list
+print("Updated list:", numbers)
